@@ -1,5 +1,7 @@
 FROM python:3.6
 
+RUN apt-get update
+
 RUN apt-get install -y build-essential g++ python-dev autotools-dev libicu-dev build-essential libbz2-dev libboost-all-dev
 RUN apt-get clean
 # Boostのインストール
