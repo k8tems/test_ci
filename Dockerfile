@@ -13,4 +13,6 @@ RUN wget -qO ${BOOST_TARBALL} http://sourceforge.net/projects/boost/files/boost/
 RUN tar xzvf ${BOOST_TARBALL}
 RUN rm -rf ${BOOST_TARBALL}
 
+RUN echo 1
+
 ENTRYPOINT python -m main
