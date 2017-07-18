@@ -8,3 +8,5 @@ services:
 before_install:
   - docker info
   - docker build -t k8tems/test_ci .
+
+script: python -m test
