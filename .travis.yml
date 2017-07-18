@@ -5,4 +5,4 @@ services:
 
 before_install:
   - docker info
-  - docker build -t k8tems/test_ci
+  - docker build -t k8tems/test_ci .
