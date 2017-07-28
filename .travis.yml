@@ -12,6 +12,6 @@ before_install:
   - gcloud auth activate-service-account $GCLOUD_EMAIL --key-file ${HOME}/gcloud_key.json
   - docker info
   - docker build -t asia.gcr.io/test/test_ci .
-  - gcloud docker push asia.gcr.io/test/test_ci
+  - gcloud docker -- push asia.gcr.io/test/test_ci
 
 script: python -m test
