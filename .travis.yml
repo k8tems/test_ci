@@ -12,8 +12,7 @@ before_install:
   - docker info
   - gcloud docker -- pull asia.gcr.io/$PROJECT_ID/test_ci
   # Some commands take more than 10 mins
-  - travis_wait 30 mvn install
-  - docker build --cache-from asia.gcr.io/$PROJECT_ID/test_ci -t asia.gcr.io/$PROJECT_ID/test_ci .
+  - travis_wait 30 docker build --cache-from asia.gcr.io/$PROJECT_ID/test_ci -t asia.gcr.io/$PROJECT_ID/test_ci .
   - gcloud docker -- push asia.gcr.io/$PROJECT_ID/test_ci
 
 script: python -m test
