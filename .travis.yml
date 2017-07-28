@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-  - echo $GCLOUD_KEY | base64 --decode > gcloud_key.json
+  - echo $GCLOUD_KEY | base64 --decode -i > gcloud_key.json
   - gcloud auth activate-service-account $GCLOUD_EMAIL --key-file gcloud_key.json
   - docker info
   - docker build -t asia.gcr.io/test/test_ci .
