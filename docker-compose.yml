@@ -1,0 +1,11 @@
+verseion: "3.3"
+
+services:
+  nginx:
+    image: nginx
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+
