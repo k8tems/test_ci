@@ -7,6 +7,7 @@ services:
 
 before_install:
   - docker-compose -v
+  - docker-compose up -d
   - gcloud -v
   - echo $GCLOUD_KEY | base64 --decode -i > ${HOME}/gcloud_key.json
   - gcloud auth activate-service-account $GCLOUD_EMAIL --key-file ${HOME}/gcloud_key.json
